@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the opl_search_result feature.
+ */
+
+include_once 'opl_search_result.features.inc';

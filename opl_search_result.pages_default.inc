@@ -56,7 +56,7 @@ function opl_search_result_default_page_manager_handlers() {
   $pane->access = array();
   $pane->configuration = array(
     'link' => 1,
-    'markup' => 'h2',
+    'markup' => 'h3',
     'id' => '',
     'class' => '',
     'context' => 'argument_entity_panels_entity_id:node_1',
@@ -176,6 +176,8 @@ function opl_search_result_default_page_manager_handlers() {
     'style_settings' => array(
       'default' => NULL,
       'middle' => NULL,
+      'left' => NULL,
+      'right' => NULL,
     ),
   );
   $display->cache = array();
@@ -199,7 +201,7 @@ function opl_search_result_default_page_manager_handlers() {
     'delta_offset' => '0',
     'delta_reversed' => FALSE,
     'formatter_settings' => array(
-      'title_style' => 'h2',
+      'title_style' => 'h3',
       'title_link' => 'content',
       'title_class' => '',
     ),
@@ -228,7 +230,7 @@ function opl_search_result_default_page_manager_handlers() {
   $pane->access = array();
   $pane->configuration = array(
     'label' => 'hidden',
-    'formatter' => 'text_default',
+    'formatter' => 'text_plain',
     'delta_limit' => 0,
     'delta_offset' => '0',
     'delta_reversed' => FALSE,
@@ -363,7 +365,7 @@ function opl_search_result_default_page_manager_handlers() {
     'delta_offset' => '0',
     'delta_reversed' => FALSE,
     'formatter_settings' => array(
-      'title_style' => 'h2',
+      'title_style' => 'h3',
       'title_link' => 'content',
       'title_class' => '',
     ),
@@ -614,7 +616,7 @@ function opl_search_result_default_page_manager_handlers() {
       'more_link' => '0',
       'more_text' => 'Read more',
       'trim_options' => array(
-        'text' => 0,
+        'text' => 'text',
       ),
       'trim_preserve_tags' => '',
     ),
@@ -750,7 +752,7 @@ function opl_search_result_default_page_manager_handlers() {
     'delta_offset' => '0',
     'delta_reversed' => FALSE,
     'formatter_settings' => array(
-      'title_style' => 'h2',
+      'title_style' => 'h3',
       'title_link' => 'content',
       'title_class' => '',
     ),
@@ -792,7 +794,7 @@ function opl_search_result_default_page_manager_handlers() {
       'more_text' => 'Read more',
       'summary_handler' => 'full',
       'trim_options' => array(
-        'text' => 0,
+        'text' => 'text',
       ),
       'trim_preserve_tags' => '',
     ),
@@ -1091,7 +1093,7 @@ function opl_search_result_default_page_manager_handlers() {
   $pane->access = array();
   $pane->configuration = array(
     'link' => 1,
-    'markup' => 'h2',
+    'markup' => 'h3',
     'id' => '',
     'class' => '',
     'context' => 'argument_entity_panels_entity_id:node_1',
@@ -1132,7 +1134,7 @@ function opl_search_result_default_page_manager_handlers() {
       'more_text' => 'Read more',
       'summary_handler' => 'full',
       'trim_options' => array(
-        'text' => 0,
+        'text' => 'text',
       ),
       'trim_preserve_tags' => '',
     ),
@@ -1235,7 +1237,7 @@ function opl_search_result_default_page_manager_handlers() {
     'delta_offset' => '0',
     'delta_reversed' => FALSE,
     'formatter_settings' => array(
-      'title_style' => 'h2',
+      'title_style' => 'h3',
       'title_link' => 'content',
       'title_class' => '',
     ),
@@ -1280,7 +1282,7 @@ function opl_search_result_default_page_manager_handlers() {
       'more_text' => 'Read more',
       'summary_handler' => 'full',
       'trim_options' => array(
-        'text' => 0,
+        'text' => 'text',
       ),
       'trim_preserve_tags' => '',
     ),
@@ -1371,17 +1373,23 @@ function opl_search_result_default_page_manager_handlers() {
   $display->content = array();
   $display->panels = array();
   $pane = new stdClass();
-  $pane->pid = 'new-d7c2ec17-201c-4282-90f5-03c2619f5e7e';
+  $pane->pid = 'new-ae7f36c8-d457-4a19-bd38-7cebec60c559';
   $pane->panel = 'right';
-  $pane->type = 'node_title';
-  $pane->subtype = 'node_title';
+  $pane->type = 'entity_field';
+  $pane->subtype = 'node:title_field';
   $pane->shown = TRUE;
   $pane->access = array();
   $pane->configuration = array(
-    'link' => 1,
-    'markup' => 'h2',
-    'id' => '',
-    'class' => '',
+    'label' => 'hidden',
+    'formatter' => 'title_linked',
+    'delta_limit' => 0,
+    'delta_offset' => '0',
+    'delta_reversed' => FALSE,
+    'formatter_settings' => array(
+      'title_style' => 'h3',
+      'title_link' => 'content',
+      'title_class' => '',
+    ),
     'context' => 'argument_entity_panels_entity_id:node_1',
     'override_title' => 0,
     'override_title_text' => '',
@@ -1398,11 +1406,158 @@ function opl_search_result_default_page_manager_handlers() {
   $pane->extras = array();
   $pane->position = 0;
   $pane->locks = array();
-  $pane->uuid = 'd7c2ec17-201c-4282-90f5-03c2619f5e7e';
-  $display->content['new-d7c2ec17-201c-4282-90f5-03c2619f5e7e'] = $pane;
-  $display->panels['right'][0] = 'new-d7c2ec17-201c-4282-90f5-03c2619f5e7e';
+  $pane->uuid = 'ae7f36c8-d457-4a19-bd38-7cebec60c559';
+  $display->content['new-ae7f36c8-d457-4a19-bd38-7cebec60c559'] = $pane;
+  $display->panels['right'][0] = 'new-ae7f36c8-d457-4a19-bd38-7cebec60c559';
   $pane = new stdClass();
-  $pane->pid = 'new-a7ca484c-f4b2-4dc6-9e9c-239d8c2ed9ca';
+  $pane->pid = 'new-185dfaab-8604-4710-8ea7-216856307b3d';
+  $pane->panel = 'right';
+  $pane->type = 'entity_field';
+  $pane->subtype = 'node:body';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'label' => 'hidden',
+    'formatter' => 'smart_trim_format',
+    'delta_limit' => 0,
+    'delta_offset' => '0',
+    'delta_reversed' => FALSE,
+    'formatter_settings' => array(
+      'trim_length' => '25',
+      'trim_type' => 'words',
+      'trim_suffix' => '...',
+      'trim_link' => '0',
+      'more_link' => '0',
+      'more_text' => 'Read more',
+      'summary_handler' => 'full',
+      'trim_options' => array(
+        'text' => 'text',
+      ),
+      'trim_preserve_tags' => '',
+    ),
+    'context' => 'argument_entity_panels_entity_id:node_1',
+    'override_title' => 0,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'search-result-body',
+  );
+  $pane->extras = array();
+  $pane->position = 1;
+  $pane->locks = array();
+  $pane->uuid = '185dfaab-8604-4710-8ea7-216856307b3d';
+  $display->content['new-185dfaab-8604-4710-8ea7-216856307b3d'] = $pane;
+  $display->panels['right'][1] = 'new-185dfaab-8604-4710-8ea7-216856307b3d';
+  $pane = new stdClass();
+  $pane->pid = 'new-15364d39-5357-4d99-807e-e1f1e1801e97';
+  $pane->panel = 'right';
+  $pane->type = 'token';
+  $pane->subtype = 'node:content-type';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'sanitize' => 1,
+    'context' => 'argument_entity_panels_entity_id:node_1',
+    'override_title' => 1,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array();
+  $pane->extras = array();
+  $pane->position = 2;
+  $pane->locks = array();
+  $pane->uuid = '15364d39-5357-4d99-807e-e1f1e1801e97';
+  $display->content['new-15364d39-5357-4d99-807e-e1f1e1801e97'] = $pane;
+  $display->panels['right'][2] = 'new-15364d39-5357-4d99-807e-e1f1e1801e97';
+  $display->hide_title = PANELS_TITLE_FIXED;
+  $display->title_pane = '0';
+  $handler->conf['display'] = $display;
+  $export['entity_panels_node_help_guide_search_result__panel_context_0207bfbf-c33f-41ce-a40a-3f8c8b50c8de'] = $handler;
+
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'entity_panels_node_kiosk_location_search_result__panel_context_3972e044-a2c0-403f-8e42-2c66e6946f52';
+  $handler->task = 'entity_panels';
+  $handler->subtask = 'node-kiosk_location-search_result';
+  $handler->handler = 'panel_context';
+  $handler->weight = 0;
+  $handler->conf = array(
+    'title' => 'Kiosk search result',
+    'no_blocks' => 0,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+  );
+  $display = new panels_display();
+  $display->layout = 'search_result_layout';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'middle' => NULL,
+    ),
+  );
+  $display->cache = array();
+  $display->title = '';
+  $display->uuid = '44ae807e-f978-410b-a1d2-38180fc6317d';
+  $display->storage_type = 'unknown';
+  $display->storage_id = '';
+  $display->content = array();
+  $display->panels = array();
+  $pane = new stdClass();
+  $pane->pid = 'new-9502c63c-bb8d-46b0-afad-b5d6f74c8e3c';
+  $pane->panel = 'right';
+  $pane->type = 'entity_field';
+  $pane->subtype = 'node:title_field';
+  $pane->shown = TRUE;
+  $pane->access = array();
+  $pane->configuration = array(
+    'label' => 'hidden',
+    'formatter' => 'title_linked',
+    'delta_limit' => 0,
+    'delta_offset' => '0',
+    'delta_reversed' => FALSE,
+    'formatter_settings' => array(
+      'title_style' => 'h3',
+      'title_link' => 'content',
+      'title_class' => '',
+    ),
+    'context' => 'argument_entity_panels_entity_id:node_1',
+    'override_title' => 0,
+    'override_title_text' => '',
+    'override_title_heading' => 'h2',
+  );
+  $pane->cache = array();
+  $pane->style = array(
+    'settings' => NULL,
+  );
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'search-result-title',
+  );
+  $pane->extras = array();
+  $pane->position = 0;
+  $pane->locks = array();
+  $pane->uuid = '9502c63c-bb8d-46b0-afad-b5d6f74c8e3c';
+  $display->content['new-9502c63c-bb8d-46b0-afad-b5d6f74c8e3c'] = $pane;
+  $display->panels['right'][0] = 'new-9502c63c-bb8d-46b0-afad-b5d6f74c8e3c';
+  $pane = new stdClass();
+  $pane->pid = 'new-77e4a58f-faf5-44a2-8155-6c073a003bd5';
   $pane->panel = 'right';
   $pane->type = 'entity_field';
   $pane->subtype = 'node:body';
@@ -1443,153 +1598,12 @@ function opl_search_result_default_page_manager_handlers() {
   $pane->extras = array();
   $pane->position = 1;
   $pane->locks = array();
-  $pane->uuid = 'a7ca484c-f4b2-4dc6-9e9c-239d8c2ed9ca';
-  $display->content['new-a7ca484c-f4b2-4dc6-9e9c-239d8c2ed9ca'] = $pane;
-  $display->panels['right'][1] = 'new-a7ca484c-f4b2-4dc6-9e9c-239d8c2ed9ca';
-  $pane = new stdClass();
-  $pane->pid = 'new-7972517b-4796-4266-878e-165fde06f326';
-  $pane->panel = 'right';
-  $pane->type = 'token';
-  $pane->subtype = 'node:content-type';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
-    'sanitize' => 1,
-    'context' => 'argument_entity_panels_entity_id:node_1',
-    'override_title' => 1,
-    'override_title_text' => '',
-    'override_title_heading' => 'h2',
-  );
-  $pane->cache = array();
-  $pane->style = array(
-    'settings' => NULL,
-  );
-  $pane->css = array();
-  $pane->extras = array();
-  $pane->position = 2;
-  $pane->locks = array();
-  $pane->uuid = '7972517b-4796-4266-878e-165fde06f326';
-  $display->content['new-7972517b-4796-4266-878e-165fde06f326'] = $pane;
-  $display->panels['right'][2] = 'new-7972517b-4796-4266-878e-165fde06f326';
-  $display->hide_title = PANELS_TITLE_FIXED;
-  $display->title_pane = 'new-d7c2ec17-201c-4282-90f5-03c2619f5e7e';
-  $handler->conf['display'] = $display;
-  $export['entity_panels_node_help_guide_search_result__panel_context_0207bfbf-c33f-41ce-a40a-3f8c8b50c8de'] = $handler;
-
-  $handler = new stdClass();
-  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
-  $handler->api_version = 1;
-  $handler->name = 'entity_panels_node_kiosk_location_search_result__panel_context_3972e044-a2c0-403f-8e42-2c66e6946f52';
-  $handler->task = 'entity_panels';
-  $handler->subtask = 'node-kiosk_location-search_result';
-  $handler->handler = 'panel_context';
-  $handler->weight = 0;
-  $handler->conf = array(
-    'title' => 'Kiosk search result',
-    'no_blocks' => 0,
-    'pipeline' => 'standard',
-    'body_classes_to_remove' => '',
-    'body_classes_to_add' => '',
-    'css_id' => '',
-    'css' => '',
-    'contexts' => array(),
-    'relationships' => array(),
-  );
-  $display = new panels_display();
-  $display->layout = 'onecol';
-  $display->layout_settings = array();
-  $display->panel_settings = array(
-    'style_settings' => array(
-      'default' => NULL,
-      'middle' => NULL,
-    ),
-  );
-  $display->cache = array();
-  $display->title = '';
-  $display->uuid = '44ae807e-f978-410b-a1d2-38180fc6317d';
-  $display->storage_type = 'unknown';
-  $display->storage_id = '';
-  $display->content = array();
-  $display->panels = array();
-  $pane = new stdClass();
-  $pane->pid = 'new-9502c63c-bb8d-46b0-afad-b5d6f74c8e3c';
-  $pane->panel = 'middle';
-  $pane->type = 'entity_field';
-  $pane->subtype = 'node:title_field';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
-    'label' => 'hidden',
-    'formatter' => 'title_linked',
-    'delta_limit' => 0,
-    'delta_offset' => '0',
-    'delta_reversed' => FALSE,
-    'formatter_settings' => array(
-      'title_style' => 'h2',
-      'title_link' => 'content',
-      'title_class' => '',
-    ),
-    'context' => 'argument_entity_panels_entity_id:node_1',
-    'override_title' => 0,
-    'override_title_text' => '',
-    'override_title_heading' => 'h2',
-  );
-  $pane->cache = array();
-  $pane->style = array(
-    'settings' => NULL,
-  );
-  $pane->css = array();
-  $pane->extras = array();
-  $pane->position = 0;
-  $pane->locks = array();
-  $pane->uuid = '9502c63c-bb8d-46b0-afad-b5d6f74c8e3c';
-  $display->content['new-9502c63c-bb8d-46b0-afad-b5d6f74c8e3c'] = $pane;
-  $display->panels['middle'][0] = 'new-9502c63c-bb8d-46b0-afad-b5d6f74c8e3c';
-  $pane = new stdClass();
-  $pane->pid = 'new-77e4a58f-faf5-44a2-8155-6c073a003bd5';
-  $pane->panel = 'middle';
-  $pane->type = 'entity_field';
-  $pane->subtype = 'node:body';
-  $pane->shown = TRUE;
-  $pane->access = array();
-  $pane->configuration = array(
-    'label' => 'hidden',
-    'formatter' => 'smart_trim_format',
-    'delta_limit' => 0,
-    'delta_offset' => '0',
-    'delta_reversed' => FALSE,
-    'formatter_settings' => array(
-      'trim_length' => '25',
-      'trim_type' => 'words',
-      'trim_suffix' => '...',
-      'trim_link' => '0',
-      'more_link' => '0',
-      'more_text' => 'Read more',
-      'summary_handler' => 'full',
-      'trim_options' => array(
-        'text' => 0,
-      ),
-      'trim_preserve_tags' => '',
-    ),
-    'context' => 'argument_entity_panels_entity_id:node_1',
-    'override_title' => 0,
-    'override_title_text' => '',
-    'override_title_heading' => 'h2',
-  );
-  $pane->cache = array();
-  $pane->style = array(
-    'settings' => NULL,
-  );
-  $pane->css = array();
-  $pane->extras = array();
-  $pane->position = 1;
-  $pane->locks = array();
   $pane->uuid = '77e4a58f-faf5-44a2-8155-6c073a003bd5';
   $display->content['new-77e4a58f-faf5-44a2-8155-6c073a003bd5'] = $pane;
-  $display->panels['middle'][1] = 'new-77e4a58f-faf5-44a2-8155-6c073a003bd5';
+  $display->panels['right'][1] = 'new-77e4a58f-faf5-44a2-8155-6c073a003bd5';
   $pane = new stdClass();
   $pane->pid = 'new-5e3dff4e-be57-48e1-acd7-cebfdb66f5cd';
-  $pane->panel = 'middle';
+  $pane->panel = 'right';
   $pane->type = 'token';
   $pane->subtype = 'node:content-type';
   $pane->shown = TRUE;
@@ -1611,7 +1625,7 @@ function opl_search_result_default_page_manager_handlers() {
   $pane->locks = array();
   $pane->uuid = '5e3dff4e-be57-48e1-acd7-cebfdb66f5cd';
   $display->content['new-5e3dff4e-be57-48e1-acd7-cebfdb66f5cd'] = $pane;
-  $display->panels['middle'][2] = 'new-5e3dff4e-be57-48e1-acd7-cebfdb66f5cd';
+  $display->panels['right'][2] = 'new-5e3dff4e-be57-48e1-acd7-cebfdb66f5cd';
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = 'new-9502c63c-bb8d-46b0-afad-b5d6f74c8e3c';
   $handler->conf['display'] = $display;
@@ -1663,7 +1677,7 @@ function opl_search_result_default_page_manager_handlers() {
   $pane->access = array();
   $pane->configuration = array(
     'link' => 1,
-    'markup' => 'h2',
+    'markup' => 'h3',
     'id' => '',
     'class' => '',
     'context' => 'argument_entity_panels_entity_id:node_1',
@@ -1744,7 +1758,7 @@ function opl_search_result_default_page_manager_handlers() {
       'more_text' => 'Read more',
       'summary_handler' => 'full',
       'trim_options' => array(
-        'text' => 0,
+        'text' => 'text',
       ),
       'trim_preserve_tags' => '',
     ),
@@ -1848,7 +1862,7 @@ function opl_search_result_default_page_manager_handlers() {
     'delta_offset' => '0',
     'delta_reversed' => FALSE,
     'formatter_settings' => array(
-      'title_style' => 'h2',
+      'title_style' => 'h3',
       'title_link' => 'content',
       'title_class' => '',
     ),
@@ -1996,7 +2010,7 @@ function opl_search_result_default_page_manager_handlers() {
     'delta_offset' => '0',
     'delta_reversed' => FALSE,
     'formatter_settings' => array(
-      'title_style' => 'h2',
+      'title_style' => 'h3',
       'title_link' => 'content',
       'title_class' => '',
     ),
@@ -2041,7 +2055,7 @@ function opl_search_result_default_page_manager_handlers() {
       'more_text' => 'Read more',
       'summary_handler' => 'full',
       'trim_options' => array(
-        'text' => 0,
+        'text' => 'text',
       ),
       'trim_preserve_tags' => '',
     ),
@@ -2145,7 +2159,7 @@ function opl_search_result_default_page_manager_handlers() {
     'delta_offset' => '0',
     'delta_reversed' => FALSE,
     'formatter_settings' => array(
-      'title_style' => 'h2',
+      'title_style' => 'h3',
       'title_link' => 'content',
       'title_class' => '',
     ),
@@ -2190,7 +2204,7 @@ function opl_search_result_default_page_manager_handlers() {
       'more_text' => 'Read more',
       'summary_handler' => 'full',
       'trim_options' => array(
-        'text' => 0,
+        'text' => 'text',
       ),
       'trim_preserve_tags' => '',
     ),
@@ -2203,7 +2217,10 @@ function opl_search_result_default_page_manager_handlers() {
   $pane->style = array(
     'settings' => NULL,
   );
-  $pane->css = array();
+  $pane->css = array(
+    'css_id' => '',
+    'css_class' => 'search-result-body',
+  );
   $pane->extras = array();
   $pane->position = 1;
   $pane->locks = array();
@@ -2291,7 +2308,7 @@ function opl_search_result_default_page_manager_handlers() {
     'delta_offset' => '0',
     'delta_reversed' => FALSE,
     'formatter_settings' => array(
-      'title_style' => 'h2',
+      'title_style' => 'h3',
       'title_link' => 'content',
       'title_class' => '',
     ),

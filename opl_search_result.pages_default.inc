@@ -889,7 +889,7 @@ function opl_search_result_default_page_manager_handlers() {
   $pane->access = array();
   $pane->configuration = array(
     'label' => 'hidden',
-    'formatter' => 'event_image_search_results',
+    'formatter' => 'event_image_search_results_new',
     'delta_limit' => 0,
     'delta_offset' => '0',
     'delta_reversed' => FALSE,

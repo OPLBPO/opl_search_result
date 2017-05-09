@@ -32,6 +32,13 @@ function opl_search_result_views_default_views() {
   $handler->display->display_options['style_options']['row_class'] = 'search-result-item';
   $handler->display->display_options['row_plugin'] = 'entity';
   $handler->display->display_options['row_options']['view_mode'] = 'search_result';
+  /* No results behavior: Global: Text area */
+  $handler->display->display_options['empty']['area']['id'] = 'area';
+  $handler->display->display_options['empty']['area']['table'] = 'views';
+  $handler->display->display_options['empty']['area']['field'] = 'area';
+  $handler->display->display_options['empty']['area']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area']['content'] = '<p>Sorry no results. Not finding what you\'re looking for? Browse our <a href="/sitemap">sitemap</a> or <a href="/contact">contact us</a> for more help</p>';
+  $handler->display->display_options['empty']['area']['format'] = '2';
   /* Field: Indexed Multilingual Content: Multilingual ID */
   $handler->display->display_options['fields']['search_api_et_id']['id'] = 'search_api_et_id';
   $handler->display->display_options['fields']['search_api_et_id']['table'] = 'search_api_index_default_multilingual_node_index';
@@ -88,6 +95,7 @@ function opl_search_result_views_default_views() {
     t('‹ previous'),
     t('next ›'),
     t('last »'),
+    t('<p>Sorry no results. Not finding what you\'re looking for? Browse our <a href="/sitemap">sitemap</a> or <a href="/contact">contact us</a> for more help</p>'),
     t('Multilingual ID'),
     t('Fulltext search'),
     t('Embed'),

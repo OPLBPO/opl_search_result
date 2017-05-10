@@ -845,7 +845,7 @@ function opl_search_result_default_page_manager_handlers() {
   $export['entity_panels_node_equipment_search_result__panel_context_9c65524e-14ac-43eb-ae76-2c5a41488366'] = $handler;
 
   $handler = new stdClass();
-  $handler->disabled = TRUE; /* Edit this to true to make a default handler disabled initially */
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;
   $handler->name = 'entity_panels_node_event_search_result__panel_context_7f3a9414-8a13-4f61-8c6b-d24b0661aa4a';
   $handler->task = 'entity_panels';
